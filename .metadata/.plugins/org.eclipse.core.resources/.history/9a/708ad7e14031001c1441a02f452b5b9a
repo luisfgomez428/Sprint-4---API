@@ -1,0 +1,102 @@
+package com.grupo3.historiasapi.entity;
+
+import java.sql.Date;
+
+public class Estudiante {
+
+	private Long id;
+	private String nombres;
+	private String apellidos;
+	private String grado;
+	private String email;
+	private int celular;
+	private int edad;
+	private Date fechaNacimiento;
+	private String sexo;
+	private String direccion;
+	
+	private Estudiante() {
+		
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getNombres() {
+		return nombres;
+	}
+
+	public void setNombres(String nombres) {
+		this.nombres = nombres;
+	}
+
+	public String getApellidos() {
+		return apellidos;
+	}
+
+	public void setApellidos(String apellidos) {
+		this.apellidos = apellidos;
+	}
+
+	public String getGrado() {
+		return grado;
+	}
+
+	public void setGrado(String grado) {
+		this.grado = grado;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public int getCelular() {
+		return celular;
+	}
+
+	public void setCelular(int celular) {
+		this.celular = celular;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public Date getFechaNacimiento() {
+		return fechaNacimiento;
+	}
+
+	public void setFechaNacimiento(Date fechaNacimiento) {
+		this.fechaNacimiento = fechaNacimiento;
+	}
+
+	public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
+	public String getDireccion() {
+		return direccion;
+	}
+
+	public void setDireccion(String direccion) {
+		this.direccion = direccion;
+	}
+	
+}

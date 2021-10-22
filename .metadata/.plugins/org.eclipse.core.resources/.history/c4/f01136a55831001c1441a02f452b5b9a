@@ -1,0 +1,12 @@
+package com.grupo3.historiasapi.controllers;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import com.grupo3.historiasapi.entity.Estudiante;
+
+@RestController
+public class EstudianteController {
+	
+	private Estudiante es
+	
+}

@@ -1,0 +1,5 @@
+package com.grupo3.historiasapi.repository;
+
+public interface EstidianteRepository {
+
+}

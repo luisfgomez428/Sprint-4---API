@@ -1,0 +1,15 @@
+package com.grupo3.historiasapi.entity.validators;
+
+import com.grupo3.historiasapi.entity.Estudiante;
+
+public class EstudianteValidator {
+
+	public static void save(Estudiante estudiante) {
+		
+		if (estudiante.getNombres() == null || estudiante.getNombres().trim().isEmpty()) {
+			throw new RuntimeException("Los nombres son requeridos");
+		}
+		
+	}
+	
+}

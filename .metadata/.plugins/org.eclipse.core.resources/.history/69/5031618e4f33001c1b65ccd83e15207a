@@ -1,0 +1,43 @@
+package com.grupo3.historiasapi.entity.validators;
+
+import com.grupo3.historiasapi.entity.Estudiante;
+
+public class EstudianteValidator {
+
+	public static void save(Estudiante estudiante) {
+		
+		if (estudiante.getNombres() == null || estudiante.getNombres().trim().isEmpty()) {
+			throw new RuntimeException("Los nombres son requeridos");
+		}
+		
+		if (estudiante.getNombres().length() > 50) {
+			throw new RuntimeException("El nombre del estudiante es muy largo máximo 50 caracteres");
+		}
+		
+		if (estudiante.getApellidos() == null || estudiante.getApellidos().trim().isEmpty()) {
+			throw new RuntimeException("Los apellidos son requeridos");
+		}
+		
+		if (estudiante.getApellidos().length() > 50) {
+			throw new RuntimeException("El apellido del estudiante es muy largo máximo 50 caracteres");
+		}		
+		
+		if (estudiante.getGrado() == null || estudiante.getGrado().trim().isEmpty()) {
+			throw new RuntimeException("El grado es requerido");
+		}
+		
+		if (estudiante.getGrado().length() > 20) {
+			throw new RuntimeException("El grado es muy largo máximo 20 caracteres");
+		}
+		
+		if (estudiante.getEmail() == null || estudiante.getEmail().trim().isEmpty()) {
+			throw new RuntimeException("El e-mail es requerido");
+		}
+		
+		if (estudiante.getEmail().length() > 20) {
+			throw new RuntimeException("El e-mail es muy largo máximo 100 caracteres");
+		}		
+		
+	}
+	
+}

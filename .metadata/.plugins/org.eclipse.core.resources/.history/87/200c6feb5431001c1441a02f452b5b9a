@@ -1,0 +1,34 @@
+package com.grupo3.historiasapi.entity;
+
+import java.sql.Date;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@Entity
+@Table(name="estudiante")
+public class Estudiante {
+
+	@Id
+	private Long id;
+	private String nombres;
+	private String apellidos;
+	private String grado;
+	private String email;
+	private int celular;
+	private int edad;
+	private Date fechaNacimiento;
+	private String sexo;
+	private String direccion;
+	
+	private Estudiante() {
+		
+	}
+
+
+}

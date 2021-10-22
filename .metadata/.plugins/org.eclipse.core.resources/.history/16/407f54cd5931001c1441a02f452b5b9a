@@ -1,0 +1,27 @@
+package com.grupo3.historiasapi.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.grupo3.historiasapi.entity.Estudiante;
+import com.grupo3.historiasapi.repository.EstudianteRepository;
+
+@RestController
+public class EstudianteController {
+	
+	@Autowired
+	private EstudianteRepository estudianteRepo;
+	
+	@GetMapping(value="/estudiante/{estudianteId}")
+	public ResponseEntity<Estudiante> findById(@PathVariable("estudianteId") Long estudianteId) {
+		Estudiante objEstudiante = estudianteRepo.findById(estudianteId)
+				.orElseThrow(() -> new RuntimeException("No existe el estudiante"));
+		return new ResponseEntity<Estudiante>(objEstudiante, HttpStatus.OK);
+		
+	}
+	
+}

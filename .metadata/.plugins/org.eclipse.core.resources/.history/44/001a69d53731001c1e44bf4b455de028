@@ -1,0 +1,5 @@
+package com.grupo3.historiasapi.controllers;
+
+public class MiControlador {
+
+}

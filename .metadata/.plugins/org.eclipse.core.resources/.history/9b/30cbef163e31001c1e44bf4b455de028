@@ -1,0 +1,5 @@
+package com.grupo3.historiasapi.entity;
+
+public class Estudiante {
+
+}
